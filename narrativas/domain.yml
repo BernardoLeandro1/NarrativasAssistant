@@ -22,6 +22,7 @@ intents:
   - ask_about_school
   - ask_about_romance
   - find_out_more
+  - talk_about_what
 
 entities:
   - name
@@ -57,7 +58,7 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hello, my friend!"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -79,10 +80,10 @@ responses:
   - text: "No problem!"
 
   utter_myname:
-  - text: "My name is Emrick Jackson"
-  - text: "I am Emrick Jackson"
-  - text: "Hey, my name is Emrick Jackson"
-  - text: "Hello, I am Emrick Jackson"
+  - text: "My name is Emrick Jackson, I am a scholar from the kindom of valloria, I spend many of my days in the Royal archives amidst the books, or going through our beautiful streets"
+  - text: "I am Emrick Jackson, I am a scholar from the kindom of valloria, I spend many of my days in the Royal archives amidst the books, or going through our beautiful streets"
+  - text: "Hey, my name is Emrick Jackson, I am a scholar from the kindom of valloria, I spend many of my days in the Royal archives amidst the books, or going through our beautiful streets"
+  - text: "Hello, I am Emrick Jackson, I am a scholar from the kindom of valloria, I spend many of my days in the Royal archives amidst the books, or going through our beautiful streets"
 
   utter_nationality:
   - text: "I am from the Capital City of Valloria"
@@ -118,6 +119,9 @@ It all unfolded on Eclipse Hill during a rare celestial alignment, when Malakar 
   utter_more:
   - text: "If you want to find out more, press this https://textadventures.co.uk/games/view/50mfkuy60eonfswlw3ozlg/shadows-of-valloria and play the game"
 
+  utter_funcs:
+  - text: "We can talk about the cities in the Kingdom, my friends, my parents, school, the quest me and my friends went on, the objects we used on said quest, pets and romance. I can also crack jokes, if you want. I am a great comedian!"
+
 actions:
   - utter_iamabot
   - utter_greet
@@ -140,6 +144,7 @@ actions:
   - utter_school
   - utter_romance
   - utter_more
+  - utter_funcs
 
 session_config:
   session_expiration_time: 60

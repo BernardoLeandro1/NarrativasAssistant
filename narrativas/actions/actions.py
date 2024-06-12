@@ -12,6 +12,8 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+from rasa_sdk.events import UserUtteranceReverted
+
 
 class ActionHelloWorld(Action):
 
@@ -25,7 +27,6 @@ class ActionHelloWorld(Action):
         dispatcher.utter_message(text="Hello World!")
 
         return []
-
 
 class ActionSayFriends(Action):
 
@@ -83,6 +84,8 @@ class ActionOpinionFriends(Action):
             dispatcher.utter_message(text="Sir Alden? He's a good man, no doubt. But there's an air about him, a sternness that can be intimidating. Some find it reassuring, like a shield against the world's troubles. Others, well, they might see him as too rigid, too set in his ways. But when the chips are down, there's no one I'd rather have by my side. He has AURA!")
         elif tracker.get_slot("name") == "Mira":
             dispatcher.utter_message(text="Mira is like a beacon of light in the darkest of times. Her unwavering faith and devotion to her beliefs are truly inspiring. Despite facing numerous challenges, she never loses her resolve. Having her with us on this journey... well, it makes all the difference.")
+        elif tracker.get_slot("name") == "Malakar":
+            dispatcher.utter_message(text="Malakar was a figure of imposing darkness. He was evil personafied. Me and my friends dispised him. Our objective was to take him down. He was drunk in power and becoming to dangerous for the kingdom.")
         else:
             dispatcher.utter_message(text="I have no opinion on that")
 

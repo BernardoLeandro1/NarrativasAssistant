@@ -52,6 +52,7 @@ nlu:
 - intent: mood_great
   examples: |
     - perfect
+    - I am good, thanks!
     - great
     - amazing
     - feeling like a king
@@ -140,6 +141,9 @@ nlu:
     - What are your thoughts on [Fallen](name)?
     - What do you think about [Fallen](name)?
     - What is your opinion on [Fallen](name)?
+    - Who is [Malakar](name)?
+    - What do you think about [Malakar](name)?
+    - What is your opinion on [Malakar](name)?
 
 - intent: ask_about_objects
   examples: |
@@ -231,3 +235,11 @@ nlu:
   examples: |
     - What can we know more about you?
     - Is there any thing more you want to share?
+
+- intent: talk_about_what
+  examples: |
+    - What can you talk about?
+    - What are the topics you want to cover today?
+    - So, Emrick, what do you wanna talk about?
+    - Emrick, what do you want to discuss today?
+    - What can you speak of?
