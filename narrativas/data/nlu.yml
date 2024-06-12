@@ -1,0 +1,233 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_name
+  examples: |
+    - who are you?
+    - What's your name?
+
+- intent: ask_nationality
+  examples: |
+    - Where are you from?
+    - Where did you grow up?
+    - Where were you born?
+
+- intent: ask_friends
+  examples: |
+    - Do you have friends?
+    - Who are your friends?
+    - Who is [Fallen](name)?
+    - What can you say about [Fallen](name)?
+    - Who is [Sir Alden](name)?
+    - What can you say about [Sir Alden](name)?
+    - Who is [Mira](name)?
+    - What can you say about [Mira](name)?
+
+- intent: ask_friends_meet
+  examples: |
+    - How do you meet [Sir Alden](name)?
+    - How do you know [Sir Alden](name)?
+    - How did you get to know [Sir Alden](name)?
+    - How do you know him?
+    - How do you meet [Mira](name)?
+    - How do you know [Mira](name)?
+    - How did you get to know [Mira](name)?
+    - How do you know her?
+    - How do you meet [Fallen](name)?
+    - How do you know [Fallen](name)?
+    - How did you get to know [Fallen](name)?
+
+
+- intent: ask_friends_opinion
+  examples: |
+    - What are your thoughts on [Sir Alden](name)?
+    - What do you think about [Sir Alden](name)?
+    - What is your opinion on [Sir Alden](name)?
+    - What do you think about him?
+    - What are your thoughts on [Mira](name)?
+    - What do you think about [Mira](name)?
+    - What is your opinion on [Mira](name)?
+    - What do you think about her?
+    - What are your thoughts on [Fallen](name)?
+    - What do you think about [Fallen](name)?
+    - What is your opinion on [Fallen](name)?
+
+- intent: ask_about_objects
+  examples: |
+    - What objects were important in your quest?
+    - What objects did you use?
+    - What did you use on your adventure?
+    - What objects did find useful in your travels?
+    - What is the [Crystal of Lareth](object)?
+    - Why is the [Crystal of Lareth](object) important?
+    - What is the [Map of Realms](object)?
+    - Why is the [Map of Realms](object) important?
+    - What is the [Valloria's Stormbringer](object)?
+    - Why is the [Valloria's Stormbringer](object) important?
+    - What is the [Arcane's Diary](object)?
+    - Why is the [Arcane's Diary](object) important? 
+
+- intent: ask_about_quest
+  examples: |
+    - What happened in your adventure?
+    - What did your adventure consist of?
+    - What happened in your quest?
+    - What did your quest consist of?
+    - How was your quest?
+    - How was your adventure?
+
+- intent: ask_for_joke
+  examples: |
+    - Can you tell me a joke?
+    - Do you know any joke?
+    - Do you have good jokes?
+
+- intent: ask_about_places
+  examples: |
+    - What places did you go through?
+    - Where did pass by?
+    - Where did you go through?
+    - What places composed your quest?
+    - Your adventure went through where?
+    - Your quest passed by what places?
+    - What was [Valloria](place) like?
+    - What was [Rivertown](place) like?
+    - What was [Eclipe Hill](place) like?
+    - What was [Cavern of Echoes](place) like?
+    - Can you describe [Valloria](place)?
+    - Can you describe [Rivertown](place)?
+    - Can you describe [Eclipe Hill](place)?
+    - Can you describe [Cavern of Echoes](place)?
+
+- intent: ask_about_pets
+  examples: |
+    - Did you have any pets?
+    - Do you have any pets?
+    - Do you have dogs?
+    - Do you have cats?
+    - Have you ever had pets?
+    - Have you ever owned a dog?
+    - Have you ever owned a cat?
+    - Have you ever had cats?
+    - Have you ever had dogs?
+
+- intent: ask_about_parents
+  examples: |
+    - What can you tell us about your parents?
+    - How was your life at home?
+    - How were your parents with you?
+    - What can you say about your parents?
+    - What can you tell us about you [father](parent)?
+    - How was your [father](parent) with you?
+    - What can you say about your [father](parent)?
+    - What can you tell us about you [mother](parent)?
+    - How was your [mother](parent) with you?
+    - What can you say about your [mother](parent)?
+
+- intent: ask_about_school
+  examples: |
+    - Where you good at school?
+    - Did you have good grades?
+    - Was your performance at school good?
+    - Were you a good student?
+
+- intent: ask_about_romance
+  examples: |
+    - Are you single?
+    - Do you have a girlfriend?
+    - Are you seing anybody right now?
+    - Do you have a significant other in  your life?
+
+- intent: find_out_more
+  examples: |
+    - What can we know more about you?
+    - Is there any thing more you want to share?

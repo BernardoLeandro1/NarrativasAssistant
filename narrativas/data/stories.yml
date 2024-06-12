@@ -1,0 +1,117 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: name
+  steps:
+  - intent: ask_name
+  - action: utter_myname
+
+- story: nationality
+  steps:
+  - intent: ask_nationality
+  - action: utter_nationality
+
+- story: friends
+  steps:
+  - intent: ask_friends
+  - action: action_say_friends
+  - intent: ask_friends_meet
+  - action: action_meet_friends
+  - intent: ask_friends_opinion
+  - action: action_opinion_friends
+
+- story: know_friends
+  steps:
+  - intent: ask_friends
+  - action: action_say_friends
+
+- story: meet_friends
+  steps:
+  - intent: ask_friends_meet
+  - action: action_meet_friends
+
+- story: opinion_friends
+  steps:
+  - intent: ask_friends_opinion
+  - action: action_opinion_friends
+
+- story: obejcts_use
+  steps:
+  - intent: ask_about_objects
+  - action: action_objects_use
+
+- story: quest
+  steps:
+  - intent: ask_about_quest
+  - action: utter_quest
+
+- story: jokes
+  steps:
+  - intent: ask_for_joke
+  - action: utter_joke
+
+- story: places
+  steps:
+  - intent: ask_about_places
+  - action: action_places
+
+- story: pets
+  steps:
+  - intent: ask_about_pets
+  - action: utter_animals
+
+- story: parents
+  steps:
+  - intent: ask_about_parents
+  - action: action_parents
+
+
+- story: school
+  steps:
+  - intent: ask_about_school
+  - action: utter_school
+
+
+- story: romance
+  steps:
+  - intent: ask_about_romance
+  - action: utter_romance
+
+
+- story: story
+  steps:
+  - intent: ask_about_romance
+  - action: utter_romance
+
+- story: more
+  steps:
+  - intent: find_out_more
+  - action: utter_more

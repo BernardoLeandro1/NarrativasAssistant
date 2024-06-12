@@ -1,0 +1,146 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_friends
+  - ask_name
+  - ask_nationality
+  - ask_friends_meet
+  - ask_friends_opinion
+  - ask_about_objects
+  - ask_about_quest
+  - ask_for_joke
+  - ask_about_places
+  - ask_about_pets
+  - ask_about_parents
+  - ask_about_school
+  - ask_about_romance
+  - find_out_more
+
+entities:
+  - name
+  - object
+  - place
+  - parent
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+  object:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: object
+  place:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: place
+  parent:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: parent
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "Eheheh"
+
+  utter_noproblem:
+  - text: "No problem!"
+
+  utter_myname:
+  - text: "My name is Emrick Jackson"
+  - text: "I am Emrick Jackson"
+  - text: "Hey, my name is Emrick Jackson"
+  - text: "Hello, I am Emrick Jackson"
+
+  utter_nationality:
+  - text: "I am from the Capital City of Valloria"
+  - text: "I come from the Capital City of Valloria"
+  - text: "I was born and raised in the Capital City of Valloria"
+
+  utter_quest:
+  - text: "In the kingdom of Valloria, I discovered an ancient, sealed diary containing the dark secrets of Malakar, a powerful and malevolent sorcerer plotting to seize control of the realm. I proceded to break the diary's seals, unwittingly releasing a curse that began to corrupt me with dark energy.
+Driven by a prophecy found within the diary, I joined forces with Sir Alden, a valiant knight; Mira, a divine priestess; and Faelan, a cunning rogue. Together, we embarked on a quest to gather artifacts and allies capable of stopping Malakar's sinister plan. Our journey lead us to acquire the Crystal of Lareth, which enhances Mira's powers, critical for our final confrontation.
+It all unfolded on Eclipse Hill during a rare celestial alignment, when Malakar began his dark ritual. In a fierce battle, while my companions fought valiantly against Malakar's minions, I had a difficult choice to make, in order to save Valloria from the evil of Malakar."
+
+  utter_joke:
+  - text: "Why don't scientists trust atoms? Because they make up everything!"
+  - text: "Why did the scarecrow win an award? Because he was outstanding in his field!"
+  - text: "What do you call fake spaghetti? An impasta!"
+  - text: "Why don't skeletons fight each other? They don't have the guts."
+  - text: "How does a penguin build its house? Igloos it together."
+  - text: "Why did the bicycle fall over? Because it was two-tired."
+  - text: "What do you call cheese that isn't yours? Nacho cheese!"
+  - text: "Why did the math book look sad? Because it had too many problems."
+  - text: "What do you get when you cross a snowman and a vampire? Frostbite."
+  - text: "Why don't some couples go to the gym? Because some relationships don't work out."
+
+  utter_animals:
+  - text: "In my life, I have only ever had one pet. A goat, named Ronaldo."
+
+  utter_school:
+  - text: "I was the best of my class and always got the best grades."
+
+  utter_romance:
+  - text: "I am single for the time being and I don't see that changing."
+
+  utter_more:
+  - text: "If you want to find out more, press this https://textadventures.co.uk/games/view/50mfkuy60eonfswlw3ozlg/shadows-of-valloria and play the game"
+
+actions:
+  - utter_iamabot
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_noproblem
+  - utter_myname
+  - utter_nationality
+  - action_say_friends
+  - action_meet_friends
+  - action_opinion_friends
+  - action_objects_use
+  - utter_quest
+  - utter_joke
+  - action_places
+  - utter_animals
+  - action_parents
+  - utter_school
+  - utter_romance
+  - utter_more
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
